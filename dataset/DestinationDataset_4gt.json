@@ -1,0 +1,14 @@
+{
+	"name": "DestinationDataset_4gt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADFServer",
+			"type": "LinkedServiceReference"
+		},
+		"type": "SqlServerTable",
+		"typeProperties": {
+			"tableName": "[dbo].[Emp]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

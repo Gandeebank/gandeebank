@@ -1,0 +1,51 @@
+{
+	"name": "CopyPipeline_4gt",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_4gt",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "[dbo].[Employee]"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[Emp]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource"
+					},
+					"sink": {
+						"type": "SqlServerSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_4gt",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_4gt",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
