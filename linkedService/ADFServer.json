@@ -13,6 +13,7 @@
 				},
 				"secretName": "Keyvault"
 			}
-		}
+		},
+		"description": "This is for learning test2"
 	}
 }
