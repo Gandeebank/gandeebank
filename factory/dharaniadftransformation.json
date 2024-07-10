@@ -4,11 +4,11 @@
 		"globalParameters": {
 			"Source_Path": {
 				"type": "string",
-				"value": "Dev"
+				"value": "dev"
 			},
 			"Target_Path": {
 				"type": "string",
-				"value": "Dev"
+				"value": "dev"
 			}
 		}
 	},
