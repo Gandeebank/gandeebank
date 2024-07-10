@@ -1,5 +1,13 @@
 {
 	"name": "dharaniadftransformation",
+	"properties": {
+		"globalParameters": {
+			"Source_Path": {
+				"type": "string",
+				"value": "Dev"
+			}
+		}
+	},
 	"location": "southindia",
 	"identity": {
 		"type": "SystemAssigned",
