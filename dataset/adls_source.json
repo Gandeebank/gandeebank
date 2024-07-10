@@ -15,7 +15,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "master.csv",
+				"fileName": "Master.csv",
 				"fileSystem": {
 					"value": "@dataset().Folder_name",
 					"type": "Expression"

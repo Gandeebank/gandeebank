@@ -76,11 +76,11 @@
 		"parameters": {
 			"Source_Foldername": {
 				"type": "string",
-				"defaultValue": "\\csvfiles\\"
+				"defaultValue": "csvfiles"
 			},
 			"Target_Foldername": {
 				"type": "string",
-				"defaultValue": "\\output\\"
+				"defaultValue": "output"
 			}
 		},
 		"annotations": []
