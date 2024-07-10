@@ -5,6 +5,11 @@
 			"referenceName": "ls_adls_target",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Folder_name": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

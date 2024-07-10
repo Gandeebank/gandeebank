@@ -34,7 +34,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"fileExtension": ".csv"
 						}
 					},
 					"enableStaging": false,
@@ -50,20 +50,37 @@
 				"inputs": [
 					{
 						"referenceName": "adls_source",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Folder_name": {
+								"value": "@pipeline().parameters.Source_Foldername",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "adls_output",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Folder_name": {
+								"value": "@pipeline().parameters.Target_Foldername",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
 		],
 		"parameters": {
 			"Source_Foldername": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "\\csvfiles\\"
+			},
+			"Target_Foldername": {
+				"type": "string",
+				"defaultValue": "\\output\\"
 			}
 		},
 		"annotations": []
