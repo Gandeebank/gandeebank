@@ -105,6 +105,10 @@
 									"Folder_name": {
 										"value": "@pipeline().parameters.Source_Foldername",
 										"type": "Expression"
+									},
+									"Source_Path": {
+										"value": "@pipeline().globalParameters.Source_Path",
+										"type": "Expression"
 									}
 								}
 							}
@@ -117,10 +121,30 @@
 									"Folder_name": {
 										"value": "@pipeline().parameters.Target_Foldername",
 										"type": "Expression"
+									},
+									"Target_Path": {
+										"value": "@pipeline().globalParameters.Target_Path",
+										"type": "Expression"
 									}
 								}
 							}
 						]
+					},
+					{
+						"name": "Wait1",
+						"type": "Wait",
+						"dependsOn": [
+							{
+								"activity": "Copy data1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"userProperties": [],
+						"typeProperties": {
+							"waitTimeInSeconds": 10
+						}
 					}
 				],
 				"policy": {
@@ -155,6 +179,9 @@
 				"parameters": {
 					"Folder_name": {
 						"type": "string"
+					},
+					"Target_Path": {
+						"type": "string"
 					}
 				},
 				"annotations": [],
@@ -162,6 +189,10 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
+						"folderPath": {
+							"value": "@dataset().Target_Path",
+							"type": "Expression"
+						},
 						"fileSystem": {
 							"value": "@dataset().Folder_name",
 							"type": "Expression"
@@ -190,6 +221,9 @@
 				"parameters": {
 					"Folder_name": {
 						"type": "string"
+					},
+					"Source_Path": {
+						"type": "string"
 					}
 				},
 				"annotations": [],
@@ -198,6 +232,10 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": "Master.csv",
+						"folderPath": {
+							"value": "@dataset().Source_Path",
+							"type": "Expression"
+						},
 						"fileSystem": {
 							"value": "@dataset().Folder_name",
 							"type": "Expression"
