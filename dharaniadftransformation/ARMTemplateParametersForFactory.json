@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dharaniadftransformation"
+		},
+		"ADFServer_connectionString": {
+			"value": "Integrated Security=False;Data Source=gandeebanshelllab.database.windows.net;Initial Catalog=GandeebanlabDB;User ID=gandeebank_adf"
+		},
+		"AzureBlobDSTStorage1_connectionString": {
+			"value": ""
+		},
+		"SQLServerName_connectionString": {
+			"value": "Integrated Security=False;Data Source=GandeebanSQLVM;Initial Catalog=EmployeeDB;User ID=gandeebank_adf"
+		},
+		"ls_adls_source_accountKey": {
+			"value": ""
+		},
+		"ls_adls_target_accountKey": {
+			"value": ""
+		},
+		"AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://GKkeyvault.vault.azure.net/"
+		},
+		"ls_adls_source_properties_typeProperties_url": {
+			"value": "https://dharanistorage.dfs.core.windows.net/"
+		},
+		"ls_adls_target_properties_typeProperties_url": {
+			"value": "https://dharanistorage.dfs.core.windows.net/"
+		}
+	}
+}
