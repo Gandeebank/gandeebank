@@ -5,6 +5,10 @@
 			"Source_Path": {
 				"type": "string",
 				"value": "Dev"
+			},
+			"Target_Path": {
+				"type": "string",
+				"value": "Dev"
 			}
 		}
 	},
