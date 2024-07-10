@@ -1,0 +1,9 @@
+{
+	"name": "dharaniadftransformation",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fcd5f247-30d7-4441-a73c-b772152bd30d",
+		"tenantId": "7b4fafb1-555e-47a5-9e6d-eae9f82920d2"
+	}
+}
